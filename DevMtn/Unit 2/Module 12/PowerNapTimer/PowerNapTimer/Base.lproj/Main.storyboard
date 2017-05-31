@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CaD-Lb-bGQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer View Controller-->
+        <scene sceneID="ZYg-qH-xeO">
+            <objects>
+                <viewController id="CaD-Lb-bGQ" customClass="TimerViewController" customModule="PowerNapTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dml-vj-IRF"/>
+                        <viewControllerLayoutGuide type="bottom" id="dzJ-xv-IIF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z8i-rk-ZDc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="300" translatesAutoresizingMaskIntoConstraints="NO" id="jzq-fj-KA6">
+                                <rect key="frame" x="154.5" y="154" width="66" height="360"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkJ-wm-HjF">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMD-fR-dzr">
+                                        <rect key="frame" x="0.0" y="330" width="66" height="30"/>
+                                        <state key="normal" title="Start Nap"/>
+                                        <connections>
+                                            <action selector="startButtonTapped:" destination="CaD-Lb-bGQ" eventType="touchUpInside" id="W91-Vk-sQR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jzq-fj-KA6" firstAttribute="centerX" secondItem="z8i-rk-ZDc" secondAttribute="centerX" id="AMt-OX-XDh"/>
+                            <constraint firstItem="jzq-fj-KA6" firstAttribute="centerY" secondItem="z8i-rk-ZDc" secondAttribute="centerY" id="eRI-vT-8qI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="tMD-fR-dzr" id="Vm4-J8-5EE"/>
+                        <outlet property="timerLabel" destination="GkJ-wm-HjF" id="DXS-wA-hvs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="04r-Xg-jpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="165.96701649175412"/>
+        </scene>
+    </scenes>
+</document>
